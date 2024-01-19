@@ -93,7 +93,8 @@ BXNChosen    <- BXN[BXN$CHOSEN==1,]
 BXNNotChosen <- BXN[BXN$CHOSEN==0,]
 
 # For the estimation results to be reproducible, the random number
-#   generator needs to be set here
+#   generator needs to be set here 
+#   Credits to Stijn Ruiter, who suggested adding set.seed for reproducibility.
 set.seed(123456789)
 
 # Create a list of subsets (by crime_id) of the non-chosen alternatives
@@ -118,6 +119,7 @@ BXNNotSelected <- BXN[BXN$CHOSEN==0 & BXN$PROXCITY <= -1.5,]
 
 # For the estimation results to be reproducible, the random number
 #   generator (RNG) needs to be set. The function 'sample' uses the RNG.
+#   Credits to Stijn Ruiter, who suggested adding set.seed for reproducibility.
 set.seed(123456789)
 
 # Create a list of subsets (by crime_id) of the non-chosen alternatives
